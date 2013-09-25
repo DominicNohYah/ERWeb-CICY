@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: custom-search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-04 14:59+0300\n"
+"PO-Revision-Date: 2013-09-04 14:59+0300\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: custom-search-plugin.php:32
+#: custom-search-plugin.php:109
+#, fuzzy
+msgid "Custom Search Settings"
+msgstr "Custom Search Options"
+
+#: custom-search-plugin.php:32
+msgid "Custom search"
+msgstr "Custom search"
+
+#: custom-search-plugin.php:103
+#, fuzzy
+msgid "Settings saved"
+msgstr "Instellingen"
+
+#: custom-search-plugin.php:115
+#, fuzzy
+msgid "Enable Custom search for:"
+msgstr "Schakel Custom search in bij:"
+
+#: custom-search-plugin.php:126
+msgid "Save Changes"
+msgstr "wijzigingen opslaan"
+
+#: custom-search-plugin.php:131
+#, fuzzy
+msgid "No custom post type found."
+msgstr "Leverde geen passende maat bericht soort"
+
+#, fuzzy
+#~ msgid "Pro plugins"
+#~ msgstr "Aanbevolen plugins"
+#~ msgid "Activated plugins"
+#~ msgstr "Geactiveerde plugins"
+#~ msgid "Read more"
+#~ msgstr "Lees meer"
+#~ msgid "Settings"
+#~ msgstr "Instellingen"
+#~ msgid "Installed plugins"
+#~ msgstr "Geïnstalleerde plugins"
+#~ msgid "Recommended plugins"
+#~ msgstr "Aanbevolen plugins"
+
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "Aanbevolen plugins"
+#~ msgid "Download"
+#~ msgstr "Download"
+#~ msgid "Install %s"
+#~ msgstr "Installeren %s"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Installeer nu vanaf wordpress.org"
+
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "Geactiveerde plugins"
+
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "Geactiveerde plugins"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Voor vragen kun je mailen met plugin@bestwebsoft.com of het "
+#~ "contactformulier op onze website invullen"
+#~ msgid "Options saved."
+#~ msgstr "Opties opgeslagen."
+

@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: custom-search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-04 14:58+0300\n"
+"PO-Revision-Date: 2013-09-04 14:59+0300\n"
+"Last-Translator: \n"
+"Language-Team: Sagive SEO <info@sagive.co.il>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ custom-search
+#: custom-search-plugin.php:32
+#: custom-search-plugin.php:109
+#, fuzzy
+msgid "Custom Search Settings"
+msgstr "אפשרויות חיפוש מותאם אישית"
+
+# @ custom-search
+#: custom-search-plugin.php:32
+msgid "Custom search"
+msgstr "חיפוש מותאם אישית"
+
+# @ captcha
+#: custom-search-plugin.php:103
+#, fuzzy
+msgid "Settings saved"
+msgstr "הגדרות"
+
+# @ custom-search
+#: custom-search-plugin.php:115
+#, fuzzy
+msgid "Enable Custom search for:"
+msgstr "אפשר חיפוש מתקדם ב:"
+
+# @ default
+#: custom-search-plugin.php:126
+msgid "Save Changes"
+msgstr "שמור שינויים"
+
+# @ custom-search
+#: custom-search-plugin.php:131
+#, fuzzy
+msgid "No custom post type found."
+msgstr "לא תאם אף סוג פוסט מותאם אישית."
+
+# @ captcha
+#, fuzzy
+#~ msgid "Pro plugins"
+#~ msgstr "תוספים מומלצים"
+
+# @ captcha
+#~ msgid "Activated plugins"
+#~ msgstr "תוספים פעילים"
+# @ captcha
+#~ msgid "Read more"
+#~ msgstr "קרא עוד"
+# @ captcha
+#~ msgid "Settings"
+#~ msgstr "הגדרות"
+# @ captcha
+#~ msgid "Installed plugins"
+#~ msgstr "תוספים מותקנים"
+# @ captcha
+#~ msgid "Recommended plugins"
+#~ msgstr "תוספים מומלצים"
+# @ captcha
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "תוספים מומלצים"
+
+# @ captcha
+#~ msgid "Download"
+#~ msgstr "הורד"
+# @ default
+#~ msgid "Install %s"
+#~ msgstr "התקן %s"
+# @ captcha
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "התקן כעת מ wordpress.org"
+# @ captcha
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "תוספים פעילים"
+
+# @ captcha
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "תוספים פעילים"
+
+# @ captcha
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "אם יש לך שאלות כלשהן, אנא צור עמנו קשר דרך plugin@bestwebsoft.com או "
+#~ "שתמלא את טופס יצירת הקשר באתר שלנו"
+
