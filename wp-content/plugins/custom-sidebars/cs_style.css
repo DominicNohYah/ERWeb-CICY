@@ -5,7 +5,7 @@
 	clear: both;
 }
 
-#poststuff.defaultscontainer h2{
+#poststuff.defaultsdetailscontainer h2{
 	border-bottom:0;
 	margin-bottom:5px;
 }
@@ -65,6 +65,7 @@ margin-bottom:30px;
 
 .widgets-php #wpcontent, .widgets-php #wpfooter {
     margin-right: 325px;
+    position:relative;
 }
 
 .widgets-php #widgets-left {
@@ -225,6 +226,23 @@ border: 1px solid #C00;
 
 #defaultsidebarspage .inside{
     position:static;
+}
+
+.cs-options .ajax-feedback,
+#new-sidebar-holder .ajax-feedback {
+    height:16px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+#new-sidebar-holder h3 .ajax-feedback {
+    vertical-align: bottom;
+}
+
+.sidebar-name h3 .ajax-feedback {
+    height:16px;
+    vertical-align: bottom;
+    margin: 0 5px;
 }
 
 

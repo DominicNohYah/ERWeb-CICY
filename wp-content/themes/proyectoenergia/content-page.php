@@ -14,6 +14,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+    
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

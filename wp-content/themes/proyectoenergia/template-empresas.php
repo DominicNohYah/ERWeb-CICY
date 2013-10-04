@@ -18,56 +18,26 @@ get_header(); ?>
 </header>
 <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-    $args=array('paged'=>$paged, 'post_type'=>'empresa');
+    $args=array('paged'=>$paged, 'post_type'=>'empresa' , 'tipo_eoa' => 'empresa', 'orderby' => 'title', 'posts_per_page'=>'10');
     query_posts($args);
 ?>
 <div class="contenedor-template">
+<?php twentyeleven_content_nav( 'nav-above' ); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="divempresa">
-  <div class="logo_empresa"> <?php the_post_thumbnail(array(254,242));?> </div>
-  <div class="cajadatosempresa">
-  <h2 class="nombreempresa"><?php the_title(); ?></h2>
-  <div class="descripcionempresa">
-  <?php 
-  the_content(); //mostrara el contenido del post como la descripción de la empresa
-  echo '<p>'; 
-  
-     $my_meta = get_post_meta( $post->ID, 'dirc_emp', true );
 
-if( $my_meta && '' != $my_meta ) :
- 
- echo $my_meta;
- 
- endif;
-  
-  echo '</p>'; // la función meta muestra un campo que especifiquemos
-  echo '<p>Tel:';  
-  
-     $my_meta = get_post_meta( $post->ID, 'tel_emp', true );
+<?php get_template_part( 'contentempresa', get_post_format() ); ?>
 
-if( $my_meta && '' != $my_meta ) :
- 
- echo $my_meta;
- 
- endif;
-  
-  echo '</p>';
-  echo '<p>'; 
- 
- $my_meta = get_post_meta( $post->ID, 'pagina_emp', true );
+<?php endwhile;
 
- if( $my_meta && '' != $my_meta ) :	 
- echo "<a href=$my_meta target=_blank>"; 
- echo $my_meta;
- echo '</a>';
- echo '</p>';
- endif;
-  ?>
-  </div>
-  </div>
-</div>
-<?php endwhile; ?>
+ else:
+     ?>
+
+				<article id="post-0" class="post no-results not-found">               
+						<h3 id="not-found"><?php _e( 'Lo sentimos, no hay contenido en esta sección', 'twentyeleven' ); ?></h1>
+				</article><!-- #post-0 -->
+
 <?php endif; ?>
+<?php twentyeleven_content_nav( 'nav-below' ); ?>
 </div>
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

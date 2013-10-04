@@ -821,10 +821,8 @@ function addIdToA($ob, id){
 }
 
 function getSidebarTitle(title){
-    return title + '<span><img src="images/wpspin_dark.gif" class="ajax-feedback" title="" alt=""></span>';
+    return title + '<span><img src="images/wpspin_light.gif" class="ajax-feedback" title="" alt=""></span>';
 }
-
-
 
 function var_dump(data,addwhitespace,safety,level) {
         var rtrn = '';

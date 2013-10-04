@@ -49,7 +49,7 @@
 </div>
         <?php wp_nonce_field( 'cs-set-defaults', '_where_nonce');?>
 <div id="submitwhere" class="submit">
-    <img src="http://local.wp33/wp-admin/images/wpspin_light.gif" class="ajax-feedback" title="" alt="">
+    <img src="<?php echo admin_url() ?>/images/wpspin_light.gif" class="ajax-feedback" title="" alt="">
     <input type="submit" class="button-primary" name="update-defaults-pages" value="<?php _e('Save Changes','custom-sidebars'); ?>" />
 </div>
 </form>

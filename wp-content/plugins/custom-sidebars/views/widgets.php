@@ -17,7 +17,7 @@
     <div id="cs-new-sidebar" class="widgets-holder-wrap">
         <div class="sidebar-name">
             <div class="sidebar-name-arrow"><br></div>
-            <h3><?php _e('New Sidebar','custom-sidebars') ?><span><img src="http://local.wp33/wp-admin/images/wpspin_dark.gif" class="ajax-feedback" title="" alt=""></span></h3>
+            <h3><?php _e('New Sidebar','custom-sidebars') ?><span><img src="<?php echo admin_url() ?>/images/wpspin_light.gif" class="ajax-feedback" title="" alt=""></span></h3>
         </div>
         <div class="_widgets-sortables" style="min-height: 50px; ">
             <div class="sidebar-form">
@@ -34,7 +34,7 @@
                             <input type="text" name="sidebar_description" size="30" tabindex="1" value="" class="sidebar_description" />
                     </div>
                     <p class="submit submit-sidebar">
-                        <span><img src="http://local.wp33/wp-admin/images/wpspin_light.gif" class="ajax-feedback" title="" alt=""></span>
+                        <span><img src="<?php echo admin_url() ?>/images/wpspin_light.gif" class="ajax-feedback" title="" alt=""></span>
                         <input type="submit" class="button-primary cs-create-sidebar" name="cs-create-sidebar" value="<?php _e('Create Sidebar','custom-sidebars'); ?>" />
                     </p>
                 </form>        

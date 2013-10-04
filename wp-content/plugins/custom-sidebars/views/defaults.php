@@ -9,7 +9,7 @@
 
 <form action="themes.php?page=customsidebars&p=defaults" method="post">
 
-<div id="poststuff" class="defaultscontainer">
+<div id="poststuff" class="defaultsdetailscontainer">
 <h2><?php _e('Default sidebars for single entries','custom-sidebars'); ?></h2>
 <div id ="defaultsforposts" class="stuffbox">
 <p><?php _e('These replacements will be applied to every entry post that matches a certain post type or category.','custom-sidebars'); ?></p>

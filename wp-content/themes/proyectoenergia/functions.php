@@ -653,7 +653,7 @@ if ( current_user_can('contributor') && !current_user_can('upload_files') )
 	          $contributor->add_cap('upload_files');
 	     }
 
-/*function eliminar_opciones_pantalla(){
+function eliminar_opciones_pantalla(){
 return false;
 }
 
@@ -686,14 +686,6 @@ add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return 
 
 add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
 
-
-function disable_self_ping( &$links ) {
-foreach ( $links as $l => $link )
-	if ( 0 === strpos( $link, get_option( 'home' ) ) )
-	unset($links[$l]);
-	}
-	add_action( 'pre_ping', 'disable_self_ping' );
-
 global $user_login;
 	get_currentuserinfo();
 	if ($user_login !== "admin") {
@@ -701,7 +693,7 @@ global $user_login;
 	add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 	}
 
-*/
+
 
 function custom_login_logo() {
     echo '<style type="text/css">
@@ -710,14 +702,19 @@ function custom_login_logo() {
 }
 add_action('login_head', 'custom_login_logo');
 
-add_filter( 'enter_title_here', 'nombre_empresa');
-
-function nombre_empresa ( $title ) {
+function nombre_encabezado ( $title ) {
 		if ( get_post_type() == 'empresa' ) {
-			$title = __( 'Nombre de la Empresa');
+			$title = __( 'Nombre');
 		}
+		
+		if(get_post_type() == 'video'){
+			$title = __( 'Título del Vídeo');
+			}
+			
 		return $title;
 	}
+
+add_filter( 'enter_title_here', 'nombre_encabezado');
 	
 function atom_search_where($where){
   global $wpdb;
@@ -750,3 +747,54 @@ function atom_search_groupby($groupby){
 add_filter('posts_where','atom_search_where');
 add_filter('posts_join', 'atom_search_join');
 add_filter('posts_groupby', 'atom_search_groupby');
+
+
+function add_more_buttons($buttons) {
+$buttons[] = 'hr';
+$buttons[] = 'del';
+$buttons[] = 'sub';
+$buttons[] = 'sup';
+$buttons[] = 'fontselect';
+$buttons[] = 'fontsizeselect';
+$buttons[] = 'cleanup';
+$buttons[] = 'styleselect';
+return $buttons;
+}
+add_filter("mce_buttons_3", "add_more_buttons");
+
+function displaying_editor() {
+  if ( get_post_type() == 'video') {
+  echo '<style type="text/css">
+  .postarea.edit-form-section {
+    display: none;
+   }    
+    </style>';
+  }
+  
+    if ( get_post_type() == 'empresa') {
+  echo '<style type="text/css">
+  .postarea.edit-form-section {
+    display: none;
+   }    
+    </style>';
+  }
+  
+      if ( get_post_type() == 'testimonial') {
+  echo '<style type="text/css">
+  .postarea.edit-form-section {
+    display: none;
+   }    
+    </style>';
+  }
+}
+add_filter( 'wp_default_editor', 'displaying_editor'); //Hace que el editor de texto no se muestre en los aportados de video y empresa
+add_filter('wp_default_editor', create_function('', 'return "tinymce";')); //hace que el editor de texto de wordpress siempre sea el visual
+
+
+/*function my_default_content( $content ) {
+    $content= '';
+	return $content;
+}
+
+add_filter( 'default_content', 'my_default_content' );*/
+

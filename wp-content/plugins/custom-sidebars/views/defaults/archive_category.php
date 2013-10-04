@@ -2,7 +2,7 @@
   
 <h3 class="csh3title" title="<?php _e('Click to toogle', 'custom-sidebars'); ?>"><?php _e('Category archives','custom-sidebars'); ?></h3>
 <div class="defaultsContainer"><?php if(!empty($categories)): foreach($categories as $c):?>
-        <div id="category-page-<?php echo $c->id; ?>" class="postbox closed" >
+        <div id="category-page-<?php echo $c->term_id; ?>" class="postbox closed" >
             <div class="handlediv" title="Haz clic para cambiar"><br /></div>
             <h3 class='hndle'><span><?php _e($c->name); ?></span></h3>
             

@@ -23,7 +23,12 @@
 			?>
 
 			<div id="site-generator">
-			<span class="textfooter">Todos los derechos reservados CICY 2013</span>
+			<span class="textfooter">Todos los derechos reservados CICY ER 2013</span>
+              <div class="contenedor_mbanner">
+                <a href="https://www.facebook.com/pages/Proyecto-Energ%C3%ADa-Sustentable/242525039232979?fref=ts" target="_blank"><img src="<?php bloginfo('template_directory')?>/images/FcN.png" border="0"/></a>
+                <a href="https://twitter.com/CicyEnergaRenov" target="_blank" ><img src="<?php bloginfo('template_directory')?>/images/TwitN.png" border="0"/></a>
+                <a href="http://www.youtube.com/channel/UCH865H7idNf7PIwn6M-cnlw" target="_blank"><img src="<?php bloginfo('template_directory')?>/images/YoutubeN.png" border="0"/></a>
+              </div>
             </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -19,48 +19,21 @@
 </header>
 <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-    $args=array('paged'=>$paged, 'post_type'=>'testimonial','posts_per_page'=>'9');
+    $args=array('paged'=>$paged, 'post_type'=>'testimonial','posts_per_page'=>'12','orderby' => 'title');
     query_posts($args);
 ?>
 <div class="contenedor-template">
 <?php twentyeleven_content_nav( 'nav-above' ); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="divinvestigador">
-  <div class="header-inv">
-   <div class="marcoinv"></div>
-   <div class="foto-inv"> 
-   <?php if ( has_post_thumbnail() ) {?>
-   <?php the_post_thumbnail( array(118,118) );?>
-   <?php } else {?>
-   <img src="<?php bloginfo('template_directory')?>/images/avatar.png" border="0"/>
-   <?php } ?> 
-    </div>
-   <h2 class="nombreinv"><?php the_title(); ?></h2>
-  </div>
-   <div class="cajadatosinv">
-   <div><?php //the_content(); ?></div>
-   <?php
-   echo '<label class="ETQN">Línea de investigación</label><br/>'; 
-   echo '<div class="contenido-inv">';   
-   echo get_the_term_list( $post->ID, 'testimonial-category', '', ', ', '' );
-   echo'</div>';
-   echo '<label class="ETQN">Correo electrónico</label><br/>'; 
-   echo '<div class="contenido-inv">'; 
-   
-   $my_meta = get_post_meta( $post->ID, 'correo_inv', true );
+<?php get_template_part( 'contentinv', get_post_format() ); ?>
 
-if( $my_meta && '' != $my_meta ) :
- 
- echo $my_meta;
- 
- endif;
-   
-   echo '</div>'; 
-   ?>
-   </div>
-</div>
-<?php endwhile; ?>
+<?php endwhile;  else:
+     ?>
+
+				<article id="post-0" class="post no-results not-found">               
+						<h3 id="not-found"><?php _e( 'Lo sentimos, no hay contenido en esta sección', 'twentyeleven' ); ?></h1>
+				</article><!-- #post-0 -->
 <?php endif; ?>
 <?php twentyeleven_content_nav( 'nav-below' ); ?>
 </div>

@@ -75,7 +75,7 @@
                 <img src="<?php bloginfo('template_directory')?>/images/LogotipoImagotipo.png" border="0"/>
                 </a></span></h1>
                 <?php get_search_form(); ?>
-				<div id="btnloginout"><?php wp_loginout(); ?></div>
+				<div id="btnloginout"><?php //wp_loginout(); ?></div>
 				
 			</hgroup>
 

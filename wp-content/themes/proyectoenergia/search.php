@@ -43,6 +43,12 @@ get_header(); ?>
 						
 						}
 						
+					    if ( get_post_type() == 'video' ){
+							
+						get_template_part( 'contentvideos', get_post_format() );
+						
+						}
+						
 					?>
 
 				<?php endwhile; ?>
@@ -52,10 +58,9 @@ get_header(); ?>
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-					</header><!-- .entry-header -->
 
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
+		
 					<div class="entry-content">
 						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
 						<?php get_search_form(); ?>
@@ -67,5 +72,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php //get_sidebar(); ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

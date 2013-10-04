@@ -105,10 +105,17 @@ footer, header, hgroup, menu, nav, section {
 .contenedor-empresas{
 	width:889px;	
 	}
+
+
+.page-template-template-videos-php .contenedor-template {
+float: left;
+width: 604px;
+
+}
 	
 .contenedor-template{
 	margin-left:37px;
-	
+	width:96%;
 	}
 	
 .divinvestigador {
@@ -128,10 +135,7 @@ footer, header, hgroup, menu, nav, section {
 	margin-bottom: 7px;
 	}
 
-.nombreinv {
-font-family:"avenirdemi";
-font-size:18px;
-color:#589ad9;
+.nombreinv{
 float:right;
 clear:none;
 width:100px;
@@ -139,6 +143,12 @@ height:auto;
 line-height:26px;
 margin-top: -7px;
 }
+
+.nombreinv a{
+font-family:"avenirdemi";
+font-size:18px;
+color:#589ad9;
+	}
 
 .foto-inv{
 	height:118px;
@@ -199,7 +209,7 @@ font-size:18px;
 /*Stilo Empresas*/
 .divempresa{
 	min-height:245px;
-    width: 889px;
+    width: /*889px*/ 96%;;
 	background:url(images/backEmpresas.png) no-repeat;
 	background-size:cover;
 	margin-bottom:35px;
@@ -211,11 +221,16 @@ font-size:18px;
 .logo_empresa{
 	float:left;
 	margin-right: 36px;
+	height: 240px;
+	width: 254px;
 	}
 
 .cajadatosempresa{
 	float:left;
 	width: 67%;
+	}
+.archive .cajadatosempresa, .search .cajadatosempresa{
+	width:47%;
 	}
 	
 .nombreempresa{
@@ -236,22 +251,124 @@ font-size:18px;
 
 .logo_empresa .attachment-254x226 {
     height: 240px;
+	width: 254px;
+}
+/*fin de estilo empresas*/
+
+/* estilo sección video*/
+
+
+.div-video{
+    width: 278px;
+	float:left;
+	margin-right:24px;
+	margin-bottom: 30px;
 }
 
-/*fin de estilo empresas*/
+.titulovideo {
+   color: #69BBFD;
+    font-family: "avenirdemi";
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.descripcionvideo {
+	font-size:14px;
+	font-family:"avenirdemi";
+	color:#4d4d4d;
+	margin-bottom: 4px;
+}
+
+.cat_vid {
+	font-family:"avenirregular";
+	font-size:14px;
+	color:#4d4d4d;
+	}
+
+/* fin de estilo sección video*/
+
+/*estilo sección post investigador*/
+
+.fondo_inv_post {
+	background-image:url(images/back_fotoinv.png);
+	width:261px;
+	height:310px;
+	padding: 24px 0 0 24px;
+	float: left;
+	margin-right: 40px;
+	margin-bottom: 10px;
+	}
+
+.nombre_inv_post{
+    color: #589AD9;
+    font-family: "avenirdemi";
+    font-size: 18px;
+	width: 90%;
+	margin-top: 12px;
+	}
+	
+.marco-inv-post{
+	background-image:url(images/marco-post-inv.png);
+	width:232px;
+	height:233px;
+	position:absolute;
+	}
+	
+.foto_inv_post{
+    width: 236px;
+	margin-left: 3px;
+	height: 232px;
+    margin-left: 2px;
+    margin-top: 2px;
+	}
+	
+.datos_generales_inv_1{
+	float: left;
+	width: 560px;
+	}
+
+.title_inv_post {
+    font-family: "avenirdemi";
+    font-size: 24px;
+	color:#4d4d4d;
+	}
+	
+.datos_generales_inv_2{
+	clear:both;
+	}
+		
+.title_label_inv{
+	font-family: "avenirdemi";
+    font-size: 18px;
+	color:#4d4d4d;
+	}
+	
+.datos_inv_post{
+    font-family:"avenirregular";
+	font-size:14px;
+	color:#4d4d4d;
+	}	
+/* fin estilo post investigador*/
 
 body {
 	padding: 0 2em;
 }
 #page {
 	margin: 0 auto;
-	max-width: 960px;
+	width: 960px;
 }
 #branding hgroup {
 	
 }
 #access div {
 	
+}
+
+.fa-image {
+    height: 322px;
+    width: 580px;
 }
 
 .search #branding, .archive #branding{
@@ -308,7 +425,14 @@ text-transform:uppercase;
 	line-height: 17px;
 }
 
-
+#not-found{
+    color:#4d4d4d;
+	font-size:36px;
+	font-family: 'avenirdemi';
+	font-weight:bold;
+	margin-bottom: 35px;
+	}
+	
 .btnleer {
    display: inline;
     position: relative;
@@ -380,6 +504,7 @@ text-transform:uppercase;
 
 .fondoarticle .attachment-254x226.wp-post-image {
     height: 226px;
+	width: 254px;
 }
 
 .marco-foto{
@@ -412,13 +537,17 @@ text-transform:uppercase;
 }
 
 #secondary {
-    background-image: url("images/CuadroNoticias.png");
+	background-color:#dfdfdf;
     float: right;
-    margin-right: 29px;
-    min-height: 304px;
-    width: 267px;
+    margin-right: 34px;
+    min-height: 450px;
+    width: 259px;
 	padding-left:24px;
 	padding-top:24px;
+	border: #4d4d4d solid 1px;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px;
+	margin-bottom: 36px
 }
 
 /* Singular */
@@ -2175,11 +2304,13 @@ section.recent-posts .other-recent-posts li:after {
 .nav-previous {
 	float: left;
 	width: 50%;
+	clear: both;
 }
 .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
+	clear: both;
 }
 #content nav .meta-nav {
 	font-weight: normal;
@@ -2217,7 +2348,8 @@ section.recent-posts .other-recent-posts li:after {
 	-moz-hyphens: auto;
 	hyphens: auto;
 	clear: both;
-	margin: 0 0 2.2em;
+	margin: 0;
+	width: 90%;
 }
 .widget-title {
 	color: #5f9dd8;
@@ -2235,26 +2367,41 @@ section.recent-posts .other-recent-posts li:after {
 	margin-left: 1.5em;
 }
 .widget ul li {
-	color: #777;
-	font-size: 13px;
+	color: #4D4D4D;
+	font-size: 14px;
+    font-family: 'avenirregular';
+	font-weight:bold;
 }
 .widget a {
 	text-decoration: none;
 	color:#4d4d4d;
 	font-size:14px;
 	font-family: 'avenirregular';
+	line-height:normal;
+	font-weight: normal !important;
 }
 
+
+.sgr-custom-taxonomies-menu .widget-title {
+    line-height: 25px;
+}
 
 #secondary select{
     width: 240px;
 }
 
 .widget.widget_archive, .widget_categories {
-    /*float: left;*/
-    margin-right: 18px;
-    width: 100px;
+    float: left;
 	clear:none;
+	width: 90%;
+}
+
+.widget_categories {
+	/*margin-right:18px;*/
+	}
+
+#categories-2 h3 {
+    line-height: 25px;
 }
 
 .widget a:hover,
@@ -2538,8 +2685,8 @@ a.comment-reply-link > span {
 
 /* Comment Form */
 #respond {
-	background: #ddd;
-	border: 1px solid #d3d3d3;
+	background: #DFDFDF;
+	border: 1px solid #4D4D4D;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	margin: 0 auto 1.625em;
@@ -2739,8 +2886,17 @@ p.comment-form-comment {
 }
 
 .textfooter{
-	margin: 72px 0 0 37px;
+	margin: 77px 0 0 37px;
 	float:left;
+	}
+
+.contenedor_mbanner	{
+	 float: right;
+    margin-top: 77px;
+	margin-right: 29px;
+	}
+.contenedor_mbanner	img {
+	margin-right: 7px;
 	}
 
 /* =Responsive Structure

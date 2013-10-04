@@ -1,9 +1,9 @@
 === Plugin Name ===
-Contributors: marquex
+Contributors: marquex, WPMUDEV
 Donate link: http://marquex.es/donate
 Tags: custom sidebars, widgets, sidebars, custom, sidebar, widget, personalize
 Requires at least: 3.3
-Tested up to: 3.5.1
+Tested up to: 3.6.1
 Stable tag: trunk
 
 Allows to create your own widgetized areas and custom sidebars, and select what sidebars to use for each post or page.
@@ -104,6 +104,12 @@ You can find some simple tutorials on the [Custom sidebars plugin web page](http
 5. screenshot-5.png The sidebar sb1 has replace the sidebar footer 1 in the front-end.
 
 == Changelog ==
+
+= 1.3 =
+*		Fixed: A lot of warnings with the PHP debug mode on
+*		Improved: Styles to make them compatible with WP 3.6
+*		Fixed: Creation of sidebars from the custom sidebars option 
+*		Fixed: Missing loading icons in the admin area
 
 = 1.2 =
 *       Fixed: Searches with no results shows default sidebar.

@@ -3,8 +3,8 @@
 Plugin Name: Custom sidebars
 Plugin URI: http://marquex.es/698/custom-sidebars-1-0
 Description: Allows to create your own widgetized areas and custom sidebars, and select what sidebars to use for each post or page.
-Version: 1.2
-Author: Javier Marquez
+Version: 1.3
+Author: Javier Marquez, WPMUDEV
 Author URI: http://marquex.es
 License: GPL2
 */
@@ -95,7 +95,7 @@ class CustomSidebars{
 		foreach($this->replacements as $sb_name => $replacement_info){
 			if($replacement_info){
 				list($replacement, $replacement_type, $extra_index) = $replacement_info;
-				if($this->checkAndFixSidebar($sb, $replacement, $replacement_type, $extra_index)){
+				if($this->checkAndFixSidebar($sb_name, $replacement, $replacement_type, $extra_index)){
 					if(sizeof($original_widgets[$replacement]) == 0){ //No widgets on custom bar, show nothing
 						$wp_registered_widgets['csemptywidget'] = $this->getEmptyWidget();
 						$_wp_sidebars_widgets[$sb_name] = array('csemptywidget');
@@ -503,7 +503,7 @@ class CustomSidebars{
 	
 	function getDefaultReplacements(){
 		if( $defaults = $this->options ){//get_option($this->option_modifiable) )
-			$defaults['post_type_posts'] = $defaults['defaults'];
+			$defaults['post_type_posts'] = isset($defaults['defaults']) ? $defaults['defaults'] : array();
 			unset($defaults['modifiable']);
 			unset($defaults['defaults']);
 			return $defaults;
@@ -1012,9 +1012,9 @@ class CustomSidebars{
             $action = $_POST['cs_action'];
             if(! wp_verify_nonce($nonce, $action)){
                 $response = array(
-                   success => false,
-                   message => __('The operation is not secure and it cannot be completed.','custom-sidebars'),
-                   nonce => wp_create_nonce($action)
+                   'success' => false,
+                   'message' => __('The operation is not secure and it cannot be completed.','custom-sidebars'),
+                   'nonce' => wp_create_nonce($action)
                 );
                 $this->jsonResponse( $response );
             }
@@ -1044,13 +1044,13 @@ class CustomSidebars{
                 $this->storeDefaults();
             } catch(Exception $e) {
                 return array(
-                    success => false,
-                    message => __('There has been an error storing the sidebars. Please, try again.', 'custom-sidebars')
+                    'success' => false,
+                    'message' => __('There has been an error storing the sidebars. Please, try again.', 'custom-sidebars')
                 );
             }
             return array(
-                success => true,
-                message => $this->message
+                'success' => true,
+                'message' => $this->message
             );
         }
         
@@ -1059,16 +1059,16 @@ class CustomSidebars{
             
             if($this->message_class == 'error')
                 return array(
-                   success => false,
-                   message => $this->message
+                   'success' => false,
+                   'message' => $this->message
                 );
             
             return array(
-                success => true,
-                message => __('The sidebar has been created successfully.','custom-sidebars'),
-                name => trim($_POST['sidebar_name']),
-                description => trim($_POST['sidebar_description']),
-                id => $this->sidebar_prefix . sanitize_html_class(sanitize_title_with_dashes($_POST['sidebar_name']))
+                'success' => true,
+                'message' => __('The sidebar has been created successfully.','custom-sidebars'),
+                'name' => trim($_POST['sidebar_name']),
+                'description' => trim($_POST['sidebar_description']),
+                'id' => $this->sidebar_prefix . sanitize_html_class(sanitize_title_with_dashes($_POST['sidebar_name']))
             );
         }
         
@@ -1076,8 +1076,8 @@ class CustomSidebars{
             $this->deleteSidebar();
             
             return array( 
-                message => $this->message,
-                success => $this->message_class != 'error'
+                'message' => $this->message,
+                'success' => $this->message_class != 'error'
             );
         }
         
@@ -1092,10 +1092,10 @@ class CustomSidebars{
             
             $sidebar = $this->getSidebar($id, $this->getCustomSidebars());
             return array(
-                message => $this->message,
-                success => $this->message_class != 'error',
-                name => $sidebar['name'],
-                description => $sidebar['description']
+                'message' => $this->message,
+                'success' => $this->message_class != 'error',
+                'name' => $sidebar['name'],
+                'description' => $sidebar['description']
             );
         }
         
