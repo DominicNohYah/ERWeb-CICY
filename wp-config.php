@@ -20,7 +20,7 @@ if (isset($_SERVER["DATABASE_URL"])) {
   define("DB_USER", $db["user"]);
   define("DB_PASSWORD", $db["pass"]);
   define("DB_HOST", $db["host"]);
-  define('DB_CHARSET', 'latin1');
+  define('DB_CHARSET', 'utf8');
   define('DB_COLLATE', '');
 }
 else {
